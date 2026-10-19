@@ -18,6 +18,7 @@ package com.example.superheroes.ui.theme
 
 import android.app.Activity
 import android.os.Build
+import android.view.View
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -116,9 +117,7 @@ fun SuperheroesTheme(
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
-            val window = (view.context as Activity).window
-            window.statusBarColor = Color.Transparent.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
+            setUpEdgeToEdge(view, darkTheme)
         }
     }
 
@@ -128,4 +127,20 @@ fun SuperheroesTheme(
         shapes = Shapes,
         content = content
     )
+}
+
+/** Configuración del apartado 5: barras transparentes e iconos según el tema. */
+@Suppress("DEPRECATION") // Se conservan estas APIs para Android 7 a 14, como en el codelab.
+private fun setUpEdgeToEdge(view: View, darkTheme: Boolean) {
+    val window = (view.context as Activity).window
+    WindowCompat.setDecorFitsSystemWindows(window, false)
+    window.statusBarColor = Color.Transparent.toArgb()
+    window.navigationBarColor = when {
+        Build.VERSION.SDK_INT >= 29 -> Color.Transparent.toArgb()
+        Build.VERSION.SDK_INT >= 26 -> Color(0xFF, 0xFF, 0xFF, 0x63).toArgb()
+        else -> Color(0x00, 0x00, 0x00, 0x50).toArgb()
+    }
+    val controller = WindowCompat.getInsetsController(window, view)
+    controller.isAppearanceLightStatusBars = !darkTheme
+    controller.isAppearanceLightNavigationBars = !darkTheme
 }
