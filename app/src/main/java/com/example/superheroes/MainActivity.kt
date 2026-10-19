@@ -59,7 +59,7 @@ fun TopAppBar(modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.displayLarge
             )
         },
-        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+        colors = TopAppBarDefaults.topAppBarColors(
             containerColor = MaterialTheme.colorScheme.background,
             titleContentColor = MaterialTheme.colorScheme.onBackground
         )

@@ -9,7 +9,7 @@ import androidx.annotation.StringRes
 
 /** Recursos que describen un superhéroe del codelab. */
 data class Hero(
-    @StringRes val nameRes: Int,
-    @StringRes val descriptionRes: Int,
-    @DrawableRes val imageRes: Int
+    @param:StringRes @field:StringRes val nameRes: Int,
+    @param:StringRes @field:StringRes val descriptionRes: Int,
+    @param:DrawableRes @field:DrawableRes val imageRes: Int
 )
