@@ -24,7 +24,7 @@ Fecha: 18 de octubre de 2026, America/Guayaquil.
 | 9. Adaptación de pantalla | Aprobada en el teléfono probado, en vertical y horizontal. La columna de texto crece sin superponerse a las imágenes; la lista admite desplazamiento con el espacio reducido. [Horizontal](evidencias/pantalla-horizontal.png). |
 | 10. Comparación oficial | Realizada. Se inspeccionaron las capturas clara y oscura del codelab, las láminas de medidas, la lista sin barra y la barra superior. Coinciden paletas, Cabin, radios, elevación, ilustraciones y organización. Los saltos de línea varían por el ancho de 360 dp del teléfono y la navegación de tres botones. No se afirma igualdad de píxeles entre dispositivos distintos. |
 | 11. Git | Historial incremental real, títulos y cuerpos en español, sin commits vacíos, sin fechas artificiales y sin importar el historial de Google. Revisión de `git diff`, `git status` y `git log` en las etapas. [Relación](HISTORIAL.md). |
-| 12. GitHub | La verificación de publicación se incorporará después de crear y comprobar el repositorio remoto. |
+| 12. GitHub | Aprobada. [Repositorio público](https://github.com/diegocalva04/Superheroes-Kotlin-JetpackCompose), rama principal `main`, acceso anónimo HTTP 200. Los 15 commits de la publicación inicial coinciden exactamente con el historial local; ambas referencias apuntaban a `0fa07455cab397356d3bf449811797c4cbee2026`. Este informe y las capturas de GitHub se incorporan en el commit posterior de verificación. |
 
 ## Pruebas automatizadas
 
@@ -64,3 +64,9 @@ Se usó AndroidJUnitRunner sobre los APK instalados mediante ADB. [Salida ínteg
 La ejecución se probó en un teléfono API 35, en ambos temas y orientaciones. No se ejecutó en API 24–28 ni en otros fabricantes, tamaños de letra o modalidades de navegación. Esas variantes siguen pendientes de una matriz de dispositivos más amplia; la compatibilidad mínima está declarada y las ramas del codelab se conservaron y revisaron.
 
 Se restauraron el modo nocturno automático y la orientación vertical originales del teléfono después de las capturas. Las evidencias son capturas auténticas de la aplicación y del editor; no son simulaciones ni imágenes del codelab.
+
+## Publicación comprobada
+
+Se creó el repositorio `diegocalva04/Superheroes-Kotlin-JetpackCompose` con visibilidad pública y se ejecutó el push real del historial completo. Se verificaron `visibility: PUBLIC`, la rama predeterminada `main`, la igualdad del SHA local/remoto, los 15 hashes publicados y los 71 archivos de la primera publicación. Una petición HTTP sin credenciales y la sesión del navegador sin iniciar sesión permitieron abrir el repositorio y su historial.
+
+Las capturas [repositorio público](evidencias/github-repositorio.png) e [historial en español](evidencias/github-commits.png) documentan esa publicación inicial. Este commit de documentación añade la evidencia de publicación; por eso sus capturas muestran el commit inmediatamente anterior. La integridad final se comprueba de nuevo después de subir esta documentación.

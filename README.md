@@ -2,6 +2,8 @@
 
 Aplicación Android desarrollada con Kotlin y Jetpack Compose para practicar Material Design 3 mediante una lista de seis superhéroes. Implementa el [codelab oficial de Google: Práctica, compila una app de superhéroes](https://developer.android.com/codelabs/basic-android-kotlin-compose-practice-superheroes?hl=es-419).
 
+[Repositorio público del proyecto](https://github.com/diegocalva04/Superheroes-Kotlin-JetpackCompose) · [Historial de commits](https://github.com/diegocalva04/Superheroes-Kotlin-JetpackCompose/commits/main/).
+
 Se desarrolló progresivamente sobre la plantilla **Empty Activity creada por el usuario**, con commits auténticos en español. La solución de Google se consultó como referencia y como fuente de recursos; no se importó su historial Git.
 
 ## Resultado

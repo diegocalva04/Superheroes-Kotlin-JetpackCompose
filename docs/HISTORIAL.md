@@ -1,6 +1,6 @@
 # Historial de desarrollo
 
-Esta relación describe los commits de implementación y pruebas existentes antes del commit que añade la documentación. Los commits posteriores de documentación, evidencias y verificación de publicación se consultan en el historial Git completo. Todos los commits se crearon durante el desarrollo, sin fechas artificiales ni importación del historial oficial.
+Esta relación describe los commits de implementación, pruebas y documentación inicial. El commit que añade la verificación de publicación se consulta en el historial Git completo y en la relación final entregada fuera del repositorio. Todos los commits se crearon durante el desarrollo, sin fechas artificiales ni importación del historial oficial.
 ## 6d913d7 — chore: inicializar proyecto Android Superheroes con Kotlin y Jetpack Compose
 
 Se registra la plantilla Empty Activity creada por el usuario en Android Studio y se adapta al paquete com.example.superheroes, nombre Superheroes y SDK mínimo API 24. Se conservan Kotlin, Compose, Material 3, el catálogo de versiones y el wrapper Gradle de la plantilla disponible.
@@ -80,3 +80,7 @@ Las pruebas instrumentadas compilan correctamente. Después de compilar el APK d
 Se elimina colors.xml con los colores morados y turquesas de Empty Activity, ya reemplazados por las paletas oficiales en Color.kt. Se retira la etiqueta redundante de la actividad, que hereda correctamente Superheroes de la aplicación.
 
 Se conservan intactos los vectores oficiales aunque lint recomienda tamaños intrínsecos menores: se dibujan dentro de contenedores de 72 dp y modificarlos impediría conservar los recursos originales. Las sugerencias de actualización de dependencias se documentan sin cambiar el toolchain validado.
+
+## 0fa0745 — docs: documentar implementación, pruebas y evidencias de Superheroes
+
+Se incorporaron README, análisis de los seis apartados, atribuciones, relación del desarrollo e informe de validación. Se añadieron registros de compilación, lint y seis pruebas instrumentadas aprobadas, y capturas auténticas de la aplicación y de Android Studio.
